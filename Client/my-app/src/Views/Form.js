@@ -16,3 +16,4 @@ export default function Form() {
 }
 
 // Very helpful: https://www.bezkoder.com/react-node-mongodb-auth/
+// Also view: https://www.andrew-best.com/posts/learn-auth-the-hard-way-part-one/
