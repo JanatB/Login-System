@@ -10,8 +10,17 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-    res.send("Hello world!")
+    res.send("Default Data!")
+
 })
+
+app.get('/api', (req, res) => {
+    taskModel.find({}).then(allTasks => {
+        res.json(allTasks)
+    })
+
+})
+
 
 app.post('/api', (req, res) => {
     const body = req.body
@@ -27,9 +36,3 @@ app.post('/api', (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}...`)
 })
-
-
-// Connect mongoose
-// create schema 
-// save note
-// test frontend (Check w/ mongoose)

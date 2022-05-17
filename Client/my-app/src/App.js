@@ -8,7 +8,8 @@ function App() {
   return (
     <div>
       <nav>
-        <Link to="/list">List</Link>
+        <Link to="/list">List</Link> <br />
+        <Link to="/">Form</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Form />}/>
