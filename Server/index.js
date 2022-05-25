@@ -1,6 +1,6 @@
 express = require('express')
 const app = express()
-const taskModel = require('./Database/task')
+const taskModel = require('./Models/task')
 var cors = require('cors')
 const port = 3001
 

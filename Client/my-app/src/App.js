@@ -1,7 +1,8 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom"
-import Form from "./Views/Form";
+import Form from "./Views/Login";
 import List from "./Views/List"
+import Signup from "./Views/Signup"
 
 function App() {
 
@@ -9,11 +10,13 @@ function App() {
     <div>
       <nav>
         <Link to="/list">List</Link> <br />
-        <Link to="/">Form</Link>
+        <Link to="/logIn">Login</Link> <br />
+        <Link to="/signUp">Sign Up</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Form />}/>
+        <Route path="/logIn" element={<Form />}/>
         <Route path="/list" element={<List  />} />
+        <Route path="/signUp" element={<Signup />}/>
 
       </Routes>
 

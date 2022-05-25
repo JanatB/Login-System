@@ -10,7 +10,12 @@ mongoose.connect(url)
 })
 
 const taskSchema = new mongoose.Schema({
-    "task": String
+    "task": String,
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
+    
 })
 
 module.exports = mongoose.model('task', taskSchema) 
