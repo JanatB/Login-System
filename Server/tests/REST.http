@@ -1,0 +1,16 @@
+@port = 3001
+@default = http://localhost:{{port}}
+
+#### Testing
+GET {{default}}/api/user
+
+#### Sign up
+POST {{default}}/api/user
+Content-Type: application/json
+
+{
+    "firstName": "Jan",
+    "lastName": "B",
+    "email": "something@gmail.com",
+    "password": "password"
+} 
