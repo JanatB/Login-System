@@ -4,13 +4,23 @@
 #### Testing
 GET {{default}}/api/user
 
-#### Sign up
+#### User Sign up
 POST {{default}}/api/user
 Content-Type: application/json
 
 {
-    "firstName": "Jan",
-    "lastName": "B",
+    "firstname": "User #1",
+    "lastname": "lastname",
+    "username": "User #1",
     "email": "something@gmail.com",
-    "password": "password"
+    "password": "User #12"
 } 
+
+#### User Login
+POST {{default}}/api/login
+Content-Type: application/json
+
+{
+    "username": "User #1",
+    "password": "User #12"
+}

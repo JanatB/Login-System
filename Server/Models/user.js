@@ -10,10 +10,24 @@ mongoose.connect(config.MONGODB_URI)
 })
 
 const userSchema = new mongoose.Schema({
-    firstame: String,
-    lastName: String,
+    firstname: String,
+    lastname: String,
+    username: String,
     email: String,
-    password: String
+    passwordHash: String
+
+})
+
+// Mongo object -> JSON object? Use utility method .toJSON()
+userSchema.set('toJSON', {
+    transform: (document, returnedObject) => {
+      returnedObject.id = returnedObject._id.toString()
+      delete returnedObject._id
+      delete returnedObject.__v
+      // the passwordHash should not be revealed
+      delete returnedObject.passwordHash
+    }
+    
 })
 
 module.exports = mongoose.model('user', userSchema)

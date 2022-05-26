@@ -11,5 +11,7 @@ server.listen(port, () => {
 })
 
 // Goals:
-// 1. POST request adding a new user
-// 2. Understand how to implement login (adding a new user is POST to the userRouter)
+// 3. DONE - Encrypt the password before saving it to the DB + toJSON method 
+// 4. DONE - Send token (After successful login)
+// 5. DONE - Users cannot have the same username
+
