@@ -1,0 +1,5 @@
+// Goals:
+// DONE - use Routes to navigate to the main page after logging in
+// DONE - update sign in functionality
+// DONE - display error messages on failure to login/signup or successes
+// NOT - allow users to set their pfp and display their basic information in th main page

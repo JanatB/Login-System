@@ -9,9 +9,9 @@ POST {{default}}/api/user
 Content-Type: application/json
 
 {
-    "firstname": "User #1",
+    "firstname": "",
     "lastname": "lastname",
-    "username": "User #1",
+    "username": "User #none",
     "email": "something@gmail.com",
     "password": "User #12"
 } 

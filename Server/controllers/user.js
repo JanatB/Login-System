@@ -10,6 +10,14 @@ userRouter.get('/', (req, res) => {
 
 userRouter.post('/', async (req, res) => {
     const { firstname, lastname, username, email, password } = req.body 
+
+    if (firstname.length == 0 || 
+        lastname.length == 0 ||
+        username.length == 0 ||
+        email.length == 0 ||
+        password.length == 0){
+            return res.status(400).json({ error: 'Fill in required fields.' })
+        }
     
     // Check if username is unique
     const notUnique = await userModel.findOne({ username: username })
