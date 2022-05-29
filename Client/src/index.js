@@ -14,10 +14,11 @@ root.render(
     <Routes>
 
       <Route path='/' element={<App />}>
+        <Route index element={<LoginPage />} />
         <Route path='signup' element={<SignupPage />}/>
         <Route path='login' element={<LoginPage />}/>
       </ Route>
-      <Route path='main' element={<Main />}/>
+      <Route path='main/:id' element={<Main />}/>
 
     </Routes> 
   </BrowserRouter>

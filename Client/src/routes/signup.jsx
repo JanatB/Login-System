@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import SignupService from '../services/signup'
 
 const SignupPage = () => {
-    const [firstname, setFirstname] = useState('')
-    const [lastname, setLastname] = useState('')
-    const [email, setEmail] = useState('')
+    const [firstname, setFirstname] = useState('firstname')
+    const [lastname, setLastname] = useState('lastname')
+    const [email, setEmail] = useState('email@gmail.com')
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [notif, setNotif] = useState('')
@@ -41,6 +41,10 @@ const SignupPage = () => {
             setTimeout(() => {   
                 setNotif('')
             }, 3000)
+
+            setUsername('')
+            setPassword('')
+
         }
     }
 

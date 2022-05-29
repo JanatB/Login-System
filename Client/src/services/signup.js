@@ -8,4 +8,11 @@ const signup = async (newUser) => {
     return response
 }
 
-export default { signup }
+const getUser = async (id) => {
+
+    const response = await axios.get(`${baseURL}/${id}`)
+    return response
+
+}
+
+export default { signup, getUser }

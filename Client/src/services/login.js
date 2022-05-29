@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-const baseURL = '/api/login' // should I hardcode this?
+const baseURL = '/api/login'
 
 const login = async (credentials) => {
 

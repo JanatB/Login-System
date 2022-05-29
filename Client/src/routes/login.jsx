@@ -19,7 +19,8 @@ const LoginPage = () => {
 
             window.localStorage.setItem('loggedBlogUser', JSON.stringify(response))
             console.log(response)
-            navigate('/main')
+            console.log(response.data.id)
+            navigate(`/main/${response.data.id}`)
             setUsername("")
             setPassword("")
 

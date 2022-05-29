@@ -1,18 +1,18 @@
 @port = 3001
 @default = http://localhost:{{port}}
 
-#### Testing
-GET {{default}}/api/user
+#### Getting single user info
+GET {{default}}/api/user/6292acf4e15aa3a106639442
 
 #### User Sign up
 POST {{default}}/api/user
 Content-Type: application/json
 
 {
-    "firstname": "",
+    "firstname": "firstname",
     "lastname": "lastname",
-    "username": "User #none",
-    "email": "something@gmail.com",
+    "username": "User#none1",
+    "email": "something",
     "password": "User #12"
 } 
 
@@ -21,6 +21,6 @@ POST {{default}}/api/login
 Content-Type: application/json
 
 {
-    "username": "User #1",
-    "password": "User #12"
+    "username": "firstuser",
+    "password": "firstuser"
 }

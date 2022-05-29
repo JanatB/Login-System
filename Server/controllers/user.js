@@ -1,11 +1,14 @@
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const { default: mongoose } = require('mongoose');
 const userRouter = require('express').Router();
 const userModel = require('../models/user')
 
-// Initial endpoint is '/api/user
+// Initial endpoint is '/api/user'
 
-userRouter.get('/', (req, res) => {
-    res.send('Testing from the userRouter')
+userRouter.get('/:id', async (req, res) => {
+    const ID = req.params.id
+    const user = await userModel.findById(ID)
+    return res.json(user)
 })
 
 userRouter.post('/', async (req, res) => {
@@ -17,12 +20,21 @@ userRouter.post('/', async (req, res) => {
         email.length == 0 ||
         password.length == 0){
             return res.status(400).json({ error: 'Fill in required fields.' })
-        }
+    }
+
+    if (username.indexOf(' ') >= 0){
+        return res.status(400).json({ error: 'Username cannot contain spaces.' })
+    }
+
+    if (email.includes('@gmail.com') == false){
+        return res.status(400).json({ error: 'Please enter a valid email address.' })
+    }
+    console.log('Email address was valid :)')
     
     // Check if username is unique
     const notUnique = await userModel.findOne({ username: username })
     if (notUnique){
-        return res.json({ error: "Username is not unique." })
+        return res.status(400).json({ error: "Username is not unique." })
     }
     
     // Hash password
