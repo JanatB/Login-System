@@ -43,7 +43,7 @@ const LoginPage = () => {
             <p>{errorNotif}</p>
             <input style={{marginBottom: '7px'}} type="text" placeholder="enter username" onChange={(e) => setUsername(e.target.value)} value={username}/> <br />
             <input style={{marginBottom: '7px'}} type="password" placeholder="enter password" onChange={(e) => setPassword(e.target.value)} value={password}/> <br />
-            <button onClick={loginSubmit}>Submit</button>
+            <button style={{marginTop: '6px'}} className='defaultBtn' onClick={loginSubmit}>Submit</button>
         </div>
     )
     

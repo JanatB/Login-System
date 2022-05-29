@@ -1,12 +1,97 @@
 
 .default {
+    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
     position: absolute;
-    top: 7%;
-    left: 40%;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    background-color: white;
+
 }
 
 .Login {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 18%;
+    top: 25px;
+    width: 220px;
+    height: 195px;
+    padding-top: 3px;
     
+}
+
+.signUp {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    left: 18%;
+    top: 40px;
+    width: 220px;
+    height: 290px;
+    padding-top: 3px;
+
+}
+
+.userContainer{
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.userInformation {
+    font-size: 18px;
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.defaultIcon {
+    height: 96px;
+    width: 100px;
+}
+
+/* CSS */
+.defaultBtn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0 18px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.defaultBtn:hover {
+  background-color: #fff;
+}
+
+.defaultBtn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .defaultBtn {
+    min-width: 110px;
+    padding: 0 25px;
+  }
 }

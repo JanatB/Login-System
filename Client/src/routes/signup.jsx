@@ -50,15 +50,15 @@ const SignupPage = () => {
 
     return (
 
-        <div>
+        <div className="signUp">
             <h2>Sign up</h2>
             <p>{notif}</p>
-            <input style={{marginBottom: '7px'}} type="text" placeholder="enter firstname" onChange={(e) => setFirstname(e.target.value)} value={firstname}/> <br />
+            <input style={{marginBottom: '7px'} } type="text" placeholder="enter firstname" onChange={(e) => setFirstname(e.target.value)} value={firstname}/> <br />
             <input style={{marginBottom: '7px'}} type="text" placeholder="enter lastname" onChange={(e) => setLastname(e.target.value)} value={lastname}/> <br />
             <input style={{marginBottom: '7px'}} type="email" placeholder="enter email" onChange={(e) => setEmail(e.target.value)} value={email}/>  <br />
             <input style={{marginBottom: '7px'}} type="text" placeholder="enter username" onChange={(e) => setUsername(e.target.value)} value={username}/> <br />
             <input style={{marginBottom: '7px'}} type="password" placeholder="enter password" onChange={(e) => setPassword(e.target.value)} value={password}/> <br />
-            <button onClick={handleSignup}>Submit</button>
+            <button style={{marginTop: '8px'}} className="defaultBtn" onClick={handleSignup}>Submit</button>
         </div>
     )
 }

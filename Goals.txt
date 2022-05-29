@@ -6,7 +6,7 @@
 // 1. (DONE) Username has to be unique. Must send error message if otherwise.
 // 2. (DONE) Username cannot have a space. Must send error message if otherwise.
 // 3. (DONE) Email needs to be authentic (Has @gmail.com // google verification?) - error message otherwise.
-// 4. Send ID of user in params. Need to change res object to reflect that 
+// 4. (DONE) Send ID of user in params. Need to change res object to reflect that 
 
 
 // From frontend: error.response.data.error
